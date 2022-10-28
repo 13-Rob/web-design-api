@@ -1,0 +1,14 @@
+[
+    {
+        "id": 0,
+        "title": "Minecraft",
+        "description": "Sandbox open world",
+        "score": 4.8
+    },
+    {
+        "id": 1,
+        "title": "Mario Kart 8 Deluxe",
+        "description": "Racing nintendo game",
+        "score": 4.6
+    }
+]
