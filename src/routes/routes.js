@@ -8,6 +8,10 @@ router.get('/', (req, res) => {
     res.json(games);
 })
 
+router.get('/Juan/', (req, res) => {
+    res.json('Juan');
+})
+
 router.get('/:id', (req, res) => {
     const id = req.params.id;
 
