@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 
-const games = require('./data.json');
+const games = require('./data/data.json');
 console.log(games);
 
 router.get('/', (req, res) => {
