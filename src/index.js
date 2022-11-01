@@ -2,8 +2,7 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 
-// xd
-//algo
+
 // Configuraciones
 app.set('port', 3000);
 app.set('json spaces', 2)
@@ -13,7 +12,11 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // Rutas
-app.use('/api/juegos', require('./routes/routes'));
+app.use('/api/routes', require('./routes/routes'));
+app.use('/api/games', require('./routes/games'));
+app.use('/api/news', require('./routes/news'));
+app.use('/api/reviews', require('./routes/reviews'));
+app.use('/api/users', require('./routes/users'));
 
 // Empezar el Servidor
 app.listen(app.get('port'));

@@ -1,19 +1,19 @@
 const { Router } = require('express');
 const router = Router();
 
-const juegos = require('./data.json');
-console.log(juegos);
+const games = require('./data.json');
+console.log(games);
 
 router.get('/', (req, res) => {
-    res.json(juegos);
+    res.json(games);
 })
 
 router.get('/:id', (req, res) => {
     const id = req.params.id;
 
-    juegos.forEach(juego => {
-        if(juego.id == id){
-            res.json(juego)
+    games.forEach(game => {
+        if(game.id == id){
+            res.json(game)
         }
     })
 })
@@ -21,11 +21,11 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     const {title, description, score} = req.body;
     if(title && description && score){
-        const id = juegos.length;
-        const nuevoJuego = {id, ...req.body};
-        juegos.push(nuevoJuego);
+        const id = games.length;
+        const newGame = {id, ...req.body};
+        juegos.push(newGame);
 
-        res.send(juegos);
+        res.send(games);
     }else{
         res.status(500).json({error: 'no data'});
     }
