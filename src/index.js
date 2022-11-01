@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 
-// Cambio de Hiram
+// xd
 
 // Configuraciones
 app.set('port', 3000);
