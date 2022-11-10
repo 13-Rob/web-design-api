@@ -4,10 +4,10 @@ const router = Router();
 const users = require('./data/users.json');
 console.log(users);
 
+const usersCtrl = require('../controllers/users.controller')
+
 // Pasa la informacion de todos los usuarios.
-router.get('/', (req, res) => {
-    res.json(users);
-})
+router.get('/', usersCtrl.getUsers)
 
 // Pasa la informacion del usuario especifico sin la id ni el password.
 router.get('/:id', (req, res) => {
@@ -28,18 +28,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-router.post('/signup', (req, res) => {
-    const {email, username, password} = req.body;
-    if(email && username && password){
-        const id = users.length;
-        const newUser = {id, ...req.body};
-        users.push(newUser);
-
-        res.status(201).json(newUser);
-    }else{
-        res.status(500).json({error: 'no data'});
-    }
-})
+//router.post('/signup', usersCtrl.createUser)
 
 router.post('/login', (req, res) => {
     const {username, password} = req.body;
