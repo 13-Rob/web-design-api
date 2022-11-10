@@ -1,6 +1,5 @@
 const usersCtrl = {}
 
-const users = require('../models/users.js')
 const user = require('../models/users.js')
 //const users = require('../routes/data/users.json')
 
@@ -19,10 +18,15 @@ usersCtrl.signUp = async (req, res) =>{
     await newUser.save();
     res.send({message: 'User Created'})
 }
-// a
-usersCtrl.logIn = (req, res) =>{
-    console.log(req.body.username);
-    console.log(req.body.password);
+
+usersCtrl.logIn = async (req, res) =>{
+    const test = await user.find({username: req.body.username, password: req.body.password})
+    if(test.length == 0){
+        res.send({message: false})
+    }
+    else{
+        res.send({message: true})
+    }
 }
 
 usersCtrl.updateUser = async (req, res) =>{

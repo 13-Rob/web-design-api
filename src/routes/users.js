@@ -1,9 +1,6 @@
 const { Router } = require('express');
 const router = Router();
 
-const users = require('./data/users.json');
-console.log(users);
-
 const usersCtrl = require('../controllers/users.controller');
 
 // Pasa la informacion de todos los usuarios.
