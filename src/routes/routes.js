@@ -15,22 +15,22 @@ router.get('/:id', (req, res) => {
     const id = req.params.id;
 
     games.forEach(game => {
-        if(game.id == id){
+        if (game.id == id) {
             res.json(game)
         }
     })
 })
 
 router.post('/', (req, res) => {
-    const {title, description, score} = req.body;
-    if(title && description && score){
+    const { title, description, score } = req.body;
+    if (title && description && score) {
         const id = games.length;
-        const newGame = {id, ...req.body};
+        const newGame = { id, ...req.body };
         juegos.push(newGame);
 
         res.send(games);
-    }else{
-        res.status(500).json({error: 'no data'});
+    } else {
+        res.status(500).json({ error: 'no data' });
     }
 })
 
