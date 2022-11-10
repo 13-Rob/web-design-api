@@ -1,0 +1,39 @@
+###
+GET http://localhost:3000/api/users/
+
+###
+POST http://localhost:3000/api/users/signup
+Content-Type: application/json
+
+{
+    "email": "rcgr.13@gmail.com",
+    "username": "13Rob",
+    "password": "asdfghjkl",
+    "gender": "male",
+    "birthday": "07/13/2001",
+    "day_joined": "10/31/2022",
+    "games_played": "15"
+}
+
+###
+GET http://localhost:3000/api/users/636c5ba084238c100388446e
+
+###
+DELETE http://localhost:3000/api/users/636c5ba084238c100388446e
+
+###
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+    "username": "StarJohn",
+    "password": "qwerty"
+}
+
+###
+PUT http://localhost:3000/api/users/636c63b3f015091739551d17
+Content-Type:  application/json
+
+{
+    "games_played": "19"
+}

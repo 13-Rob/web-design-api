@@ -4,58 +4,24 @@ const router = Router();
 const users = require('./data/users.json');
 console.log(users);
 
+const usersCtrl = require('../controllers/users.controller');
+
 // Pasa la informacion de todos los usuarios.
-router.get('/', (req, res) => {
-    res.json(users);
-})
+router.get('/', usersCtrl.getUsers);
 
-// Pasa la informacion del usuario especifico sin la id ni el password.
-router.get('/:id', (req, res) => {
-    const id = req.params.id;
+// Pasa la informacion del usuario especifico basado en la id.
+router.get('/:id', usersCtrl.getUser);
 
-    users.forEach(user => {
-        if(user.id == id){
-            res.json([
-                {
-                    "username": user.username,
-                    "gender": user.gender,
-                    "birthday": user.birthday,
-                    "day joined": user['day joined'],
-                    "games played": user['games played']
-                }
-            ])
-        }
-    })
-})
+// Actualiza la informacion de un usuario
+router.put('/:id', usersCtrl.updateUser);
 
-router.post('/signup', (req, res) => {
-    const {email, username, password} = req.body;
-    if(email && username && password){
-        const id = users.length;
-        const newUser = {id, ...req.body};
-        users.push(newUser);
+// Crea un nuevo usuario
+router.post('/signup', usersCtrl.signUp);
 
-        res.status(201).json(newUser);
-    }else{
-        res.status(500).json({error: 'no data'});
-    }
-})
+// Inicia sesion de un usuario
+router.post('/login', usersCtrl.logIn);
 
-router.post('/login', (req, res) => {
-    const {username, password} = req.body;
-    if(username && password){
-        users.forEach(user => {
-            if(user.username == username){
-                if(user.password == password){
-                    res.send('You log in successfully');
-                }else{
-                    res.send('That is not the right password');
-                }
-            }
-        })
-    }else{
-        res.status(500).json({error: 'no data'});
-    }
-})
+// Elimina un usuario en especifico
+router.delete('/:id', usersCtrl.deleteUser);
 
 module.exports = router;

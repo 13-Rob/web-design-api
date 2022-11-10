@@ -6,8 +6,8 @@
         "password": "asdfghjkl",
         "gender": "male",
         "birthday": "07/13/2001",
-        "day joined": "10/31/2022",
-        "games played": "15"
+        "day_joined": "10/31/2022",
+        "games_played": "15"
     },
     {
         "id": 1,
@@ -16,8 +16,8 @@
         "password": "qwerty",
         "gender": "male",
         "birthday": "03/15/2001",
-        "day joined": "10/15/2022",
-        "games played": "30"
+        "day_joined": "10/15/2022",
+        "games_played": "30"
     },
     {
         "id": 2,
@@ -26,8 +26,8 @@
         "password": "zxcvbnm",
         "gender": "male",
         "birthday": "12/25/2000",
-        "day joined": "09/01/2022",
-        "games played": "37"
+        "day_joined": "09/01/2022",
+        "games_played": "37"
     },
     {
         "id": 3,
@@ -36,7 +36,7 @@
         "password": "poiuytrewq",
         "gender": "female",
         "birthday": "04/27/2001",
-        "day joined": "11/01/2022",
-        "games played": "21"
+        "day_joined": "11/01/2022",
+        "games_played": "21"
     }
 ]
