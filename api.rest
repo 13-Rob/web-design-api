@@ -1,0 +1,11 @@
+GET http://localhost:3000/api/news
+
+
+POST http://localhost:3000/api/news 
+Content-Type: application/json
+{
+    "title": "Star Wars Eclipse saved after all",
+    "date": "10/31/2022",
+    "description": "LucasArts will continue to develop Star Wars Eclipse, which many belived it was going to get canceled.",
+    "source":"IGN"
+}

@@ -1,3 +1,4 @@
+require('./databse')
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
@@ -14,7 +15,7 @@ app.use(express.json());
 // Rutas
 app.use('/api/routes', require('./routes/routes'));
 app.use('/api/games', require('./routes/games'));
-app.use('/api/news', require('./routes/news'));
+app.use('/api/news', require('./models/news'));
 app.use('/api/reviews', require('./routes/reviews'));
 app.use('/api/users', require('./routes/users'));
 
