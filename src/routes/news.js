@@ -1,8 +1,12 @@
 const { Router } = require('express');
 const router = Router();
 
-router.get('/', (req, res) => {
-    res.json('news route');
-})
+const newsCtrl = require("../controllers/news.controller");
+
+router.get('/', newsCtrl.getNews);
+
+router.post('/', newsCtrl.createNews);
+
+router.delete('/:id', newsCtrl.deleteNewsA);
 
 module.exports = router;

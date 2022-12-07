@@ -1,0 +1,16 @@
+[
+    {
+        "id": 0,
+        "title": "Minecraft",
+        "release_day": "11/18/2011",
+        "genre": "sandbox",
+        "coverURL": "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png"
+    },
+    {
+        "id": 1,
+        "title": "Mario Kart 8 Deluxe",
+        "release_day": "05/29/2014",
+        "genre": "racing",
+        "coverURL": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5723/5723304_sd.jpg;maxHeight=640;maxWidth=550"
+    }
+]

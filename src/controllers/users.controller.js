@@ -20,8 +20,8 @@ usersCtrl.signUp = async (req, res) => {
 }
 
 usersCtrl.logIn = async (req, res) => {
-    const test = await user.find({ username: req.body.username, password: req.body.password });
-    if (test.length == 0) {
+    const x = await user.find({ username: req.body.username, password: req.body.password });
+    if (x == 0) {
         res.send({ message: false });
     }
     else {

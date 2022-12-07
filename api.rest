@@ -1,39 +1,108 @@
 ###
-GET http://localhost:3000/api/users/
+GET http://localhost:3000/api/users
+
+###
+PUT http://localhost:3000/api/games/638f809f58d038a145dcb266
+Content-Type:  application/json
+
+{
+    "score": "3.8"
+}
+
+###
+PUT http://localhost:3000/api/games/638f828aa99a57aa75f2bf9b
+Content-Type:  application/json
+
+{
+    "coverURL": "https://github.com/13-Rob/game_covers/blob/main/704488-among-us-windows-apps-front-cover.png.jpeg?raw=true"
+}
+
+###
+GET http://localhost:3000/api/games/title/Minecraft
 
 ###
 POST http://localhost:3000/api/users/signup
 Content-Type: application/json
 
 {
-    "email": "rcgr.13@gmail.com",
-    "username": "13Rob",
+    "email": "aylin.aguilar@uabc.edu.mx",
+    "username": "Aydelin",
     "password": "asdfghjkl",
-    "gender": "male",
-    "birthday": "07/13/2001",
-    "day_joined": "10/31/2022",
-    "games_played": "15"
+    "gender": "female",
+    "birthday": "01/07/2003",
+    "day_joined": "11/10/2022",
+    "games_played": "0"
 }
 
 ###
-GET http://localhost:3000/api/users/636c5ba084238c100388446e
+GET http://localhost:3000/api/users/636c5d3bee54078b6bf9ca39
 
 ###
-DELETE http://localhost:3000/api/users/636c5ba084238c100388446e
+DELETE http://localhost:3000/api/users/636c5d3bee54078b6bf9ca39
 
 ###
 POST http://localhost:3000/api/users/login
 Content-Type: application/json
 
 {
-    "username": "Andresssss",
-    "password": "zxcvbnm"
+    "username": "Aydelin",
+    "password": "asdfghjkl"
 }
 
 ###
-PUT http://localhost:3000/api/users/636c63b3f015091739551d17
+PUT http://localhost:3000/api/games/638ef283b9b553740bc68b2c
 Content-Type:  application/json
 
 {
-    "games_played": "19"
+    "coverURL": "https://github.com/13-Rob/game_covers/blob/main/704488-among-us-windows-apps-front-cover.png.jpeg"
+}
+
+###
+POST http://localhost:3000/api/games/new
+Content-Type: application/json
+
+{
+    "title": "Among Us",
+    "release_day": "06/15/2018",
+    "genre": "Multiplayer video game",
+    "coverURL": "https://www.mobygames.com/images/covers/l/704488-among-us-windows-apps-front-cover.png"
+}
+
+###
+DELETE http://localhost:3000/api/games/638f808058d038a145dcb25c
+
+###
+GET http://localhost:3000/api/news
+
+###
+POST http://localhost:3000/api/news
+Content-Type: application/json
+
+{
+    "title": "Jedi Survivor will be released on March 2023",
+    "date": "11/2/2022",
+    "description": "The anticipated Star Wars game will be available on stores on March 2023. It is expected that a new trailer for the game will be launched on late December of this year.",
+    "source": "The Gamer",
+    "image": "https://cdn-www.comingsoon.net/assets/uploads/2022/12/swjs.jpg"
+}
+
+###
+DELETE http://localhost:3000/api/news/638f8b75b939cb03feeecb42
+
+###
+GET http://localhost:3000/api/reviews
+
+###
+GET http://localhost:3000/api/reviews/title/Minecraft
+
+###
+POST http://localhost:3000/api/reviews/write
+Content-Type: application/json
+
+{
+    "title": "Best Game Ever",
+    "score": "4.8",
+    "reviewC": "Not really, not the best game ever, but I like it that I can be racist without being judge.",
+    "game": "Red Dead Redemption 2",
+    "author": "Andresssss"
 }

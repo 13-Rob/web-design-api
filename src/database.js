@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/users', {
+mongoose.connect('mongodb://localhost/web', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-    .then(db => console.log('Ya esta conectado'))
+    .then(db => console.log('Connected'))
     .catch((err) => console.error(err));
