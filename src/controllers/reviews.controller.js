@@ -19,6 +19,7 @@ reviewsCtrl.getGameReviews = async (req, res) => {
 
 reviewsCtrl.createReview = async (req, res) => {
     const newReview = new review(req.body);
+    console.log({message:newReview})
     await newReview.save();
     res.send({ message: 'Review Posted' });
 }

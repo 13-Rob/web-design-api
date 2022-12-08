@@ -2,19 +2,14 @@
 GET http://localhost:3000/api/users
 
 ###
+GET http://localhost:3000/api/games
+
+###
 PUT http://localhost:3000/api/games/638f809f58d038a145dcb266
 Content-Type:  application/json
 
 {
-    "score": "3.8"
-}
-
-###
-PUT http://localhost:3000/api/games/638f828aa99a57aa75f2bf9b
-Content-Type:  application/json
-
-{
-    "coverURL": "https://github.com/13-Rob/game_covers/blob/main/704488-among-us-windows-apps-front-cover.png.jpeg?raw=true"
+    "description": "The Elder Scrolls V: Skyrim is an action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks. It is the fifth main installment in The Elder Scrolls series, following 2006's The Elder Scrolls IV: Oblivion, and was released worldwide for Microsoft Windows, PlayStation 3, and Xbox 360 on November 11, 2011. The game is set 200 years after the events of Oblivion, and takes place in Skyrim, the northernmost province of Tamriel. Its main story focuses on the player's character, the Dragonborn, on their quest to defeat Alduin the World-Eater, a dragon who is prophesied to destroy the world. Over the course of the game, the player completes quests and develops the character by improving skills. The game continues the open world tradition of its predecessors by allowing the player to travel anywhere in the game world at any time, and to ignore or postpone the main storyline indefinitely."
 }
 
 ###
@@ -90,19 +85,18 @@ Content-Type: application/json
 DELETE http://localhost:3000/api/news/638f8b75b939cb03feeecb42
 
 ###
+GET http://localhost:3000/api/games
+
+###
 GET http://localhost:3000/api/reviews
 
 ###
-GET http://localhost:3000/api/reviews/title/Minecraft
-
-###
-POST http://localhost:3000/api/reviews/write
+POST http://localhost:3000/api/reviews
 Content-Type: application/json
 
 {
-    "title": "Best Game Ever",
-    "score": "4.8",
-    "reviewC": "Not really, not the best game ever, but I like it that I can be racist without being judge.",
-    "game": "Red Dead Redemption 2",
-    "author": "Andresssss"
+    "title": "I don't like it",
+    "score": 0,
+    "reviewC": "Boring",
+    "game": "Mario Kart 8 Deluxe"
 }

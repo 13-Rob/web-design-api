@@ -5,7 +5,7 @@ const ReviewSchema = new Schema({
     score: { type: String, required: true },
     reviewC: { type: String, required: false },
     game: { type: String, required: true },
-    author: { type: String, required: true }
+    author: { type: String, required: false }
 }, {
     timestamps: true
 })

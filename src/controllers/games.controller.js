@@ -20,7 +20,8 @@ gamesCtrl.postGame = async (req, res) => {
 }
 
 gamesCtrl.updateGame = async (req, res) => {
-    const gameF = await game.findByIdAndUpdate(req.params.id, req.body);
+    await game.findByIdAndUpdate(req.params.id, req.body);
+    const gameF = await game.findById(req.params.id);
     res.send({ message: 'game Updated', gameF });
 }
 

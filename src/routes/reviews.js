@@ -12,10 +12,13 @@ router.get('/:id', reviewsCtrl.getReview);
 // Devuelve las reviews de cierto juego.
 router.get('/title/:game', reviewsCtrl.getGameReviews);
 
-router.post('/write', reviewsCtrl.createReview);
+// Se crea una nueva review.
+router.post('/', reviewsCtrl.createReview);
 
+// Se actualiza una review.
 router.put('/:id', reviewsCtrl.updateReview);
 
-router.delete('/', reviewsCtrl.deleteReview);
+// Se elimina una review.
+router.delete('/:id', reviewsCtrl.deleteReview);
 
 module.exports = router;
